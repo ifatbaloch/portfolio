@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Skills</title>
+  <style>
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #0f172a;
+      color: #fff;
+    }
+    body {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+
+    header {
+      background: #0b1120;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+     nav a {
+      margin-left: 20px;
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+    }
+
+
+.contact-section {
+  padding: 60px 20px;
+  background-color: #0f172a;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form .row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-form input,
+.contact-form textarea {
+  flex: 1;
+  padding: 12px;
+  background-color: #1e293b;
+  border: 2px solid #00bfff;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-form button {
+  width: fit-content;
+  margin: auto;
+  padding: 10px 30px;
+  font-size: 16px;
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0284c7;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .contact-form .row {
+    flex-direction: column;
+  }
+}
+</style>
+<body>
+    <header>
+    <h1>Portfoilio</h1>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Education.html">Education</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    </nav>
+  </header>
+    <main>
+    <section id="contact" class="contact-section">
+  <h2>Contact <span style="color:#00bfff">Me!</span></h2>
+  <form class="contact-form">
+    <div class="row">
+      <input type="text" placeholder="First Name" required>
+      <input type="text" placeholder="Last Name" required>
+    </div>
+    <div class="row">
+      <input type="text" placeholder="Phone Number" required>
+      <input type="email" placeholder="Email" required>
+    </div>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+</main>
+</body>
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const target = e.target.closest('a');
+      if (!target || target.getAttribute('target') === '_blank' || target.href.includes('#')) return;
+
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location = target.href;
+      }, 500); // match animation duration
+    });
+  });
+</script>

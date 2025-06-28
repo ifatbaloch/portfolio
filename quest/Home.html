@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ifat Bhangwar  | IT Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+  <header>
+    <h1 id="typed-text"></h1>
+    <p>IT Student | Graphic Designer | Web Developer</p>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Education.html">Education</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="main-content">
+      <div class="text-section">
+        <h2>Hi! I'm Ifat Bhangwar</h2>
+        <h1>Web Developer</h1>
+        <p>
+          I'm Ifat Bhangwar, an Information Technology student passionate about cybersecurity, graphic design, and web development.
+          I enjoy building useful projects and learning new tech skills. My goal is to become a professional Web Developer and start my own tech-based business in the future.
+        </p>
+        <br>
+        <button onclick="alert('Thanks for visiting!')">More About Me</button>
+        <br><br>
+
+        <!-- Social Media Icons -->
+        <div class="icons">
+          <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="profile-pic-container">
+        <div class="gradient-border">
+          <img src="ifat pic.jpg" alt="Profile Picture" />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Typing Effect Script -->
+  <script>
+    const typedText = document.getElementById("typed-text");
+    const text = "Ifat Baloch | IT Student Portfolio";
+    let index = 0;
+
+    function typeText() {
+      if (index < text.length) {
+        typedText.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeText, 100);
+      }
+    }
+
+    window.onload = typeText;
+  </script>
+<script src="script.js"></script>
+  
+</body>
+</html>

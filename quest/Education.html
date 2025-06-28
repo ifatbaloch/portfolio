@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Education | Ifat Bhangwar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #0f172a;
+      color: #fff;
+    }
+    body {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+
+    header {
+      background: #0b1120;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h2 {
+      color: rgb(241, 244, 245);
+    }
+    h2 a:hover {
+      color: #a8eaef;
+    }
+    nav a {
+      margin-left: 20px;
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+    }
+
+    .timeline-section {
+      padding: 50px 40px;
+      background-color: #0f172a;
+      color: #f1f5f9;
+    }
+   
+    .timeline-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .timeline-left,
+    .timeline-right {
+      flex: 1;
+      max-width: 500px;
+      min-width: 280px;
+    }
+
+    .timeline-left h2,
+    .timeline-right h2 {
+      font-size: 22px;
+     color: rgb(102, 231, 245);
+      margin-bottom: 25px;
+    }
+   
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+      padding-left: 30px;
+      border-left: 2px solid #00bfff;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -7px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      background-color: #00bfff;
+      border-radius: 50%;
+    }
+
+    .timeline-box {
+      background: #1e293b;
+      padding: 15px 20px;
+      border-radius: 8px;
+      border: 1px solid #00bfff;
+    }
+
+    .timeline-box h3 {
+      font-size: 14px;
+      color: hsl(190, 76%, 73%);
+      margin-bottom: 5px;
+    }
+
+    .timeline-box h4 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .timeline-box p {
+      font-size: 13px;
+      color: #cbd5e1;
+    }
+    .timeline-box {
+  background: #1e293b;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 1px solid #00bfff;
+  transition: all 0.3s ease;
+}
+
+.timeline-box:hover {
+  background-color: #1f2937;
+  transform: scale(1.03);
+  box-shadow: #07e9f9;
+  border-color: #04384e;
+  cursor: pointer;
+}
+
+    @media (max-width: 768px) {
+      .timeline-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 10px 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Portfolio</h2>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Education.html">Education</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="timeline-section">
+      <div class="timeline-wrapper">
+        <!-- Left Side: Experience + Certifications -->
+        <div class="timeline-left">
+          <h2>Experience</h2>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-box">
+              <h3>2024 - Present</h3>
+              <h4>Web Developer – Personal Projects</h4>
+              <p>Developed student result systems and tools using HTML, CSS, JS, PHP.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-box">
+              <h3>2023 - 2024</h3>
+              <h4>Freelancer – Web Design</h4>
+              <p>Designed simple websites for clients and practice.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-box">
+              <h3>2022 - 2023</h3>
+              <h4>Learning Phase – IT Enthusiast</h4>
+              <p>Started learning programming and online certifications.</p>
+            </div>
+          </div>
+
+          <h2 style="margin-top: 40px;">Certifications</h2>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-box">
+              <h3>2024</h3>
+              <h4>HTML, CSS & JavaScript – Coursera</h4>
+              <p>Completed beginner-friendly frontend web course.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-box">
+              <h3>2024</h3>
+              <h4>PHP & MySQL – Udemy</h4>
+              <p>Learned backend development and database integration.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Education -->
+        <div class="timeline-right">
+          <h2>Education</h2>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-box">
+              <h3>2023 - Present</h3>
+              <h4>BS IT – Quaid-e-Awam University</h4>
+              <p>Studying programming, databases, networking, and web development.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-box">
+              <h3>2021 - 2023</h3>
+              <h4>Intermediate – Pre-medical</h4>
+              <p>FSC with Biology, Physics, and Chemistry.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-box">
+              <h3>2019 - 2021</h3>
+              <h4>Matriculation – Science Group</h4>
+              <p>Completed matric with Computer, Chemistry, Physics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const target = e.target.closest('a');
+      if (!target || target.getAttribute('target') === '_blank' || target.href.includes('#')) return;
+
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location = target.href;
+      }, 500); // match animation duration
+    });
+  });
+</script>
+
+
+

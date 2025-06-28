@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Skills</title>
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+ background-color: #0e1830;
+  color: #fff;
+}
+body {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+
+header {
+  background: #0b1120;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  color: white;
+}
+
+nav a {
+  margin-left: 20px;
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #00bfff;
+}
+
+.skills-section {
+  padding: 50px 40px;
+  text-align: center;
+}
+
+.skills-section h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.skills-section h1 span {
+ color: rgb(102, 231, 245);
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.skills-box {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.skills-box h3 {
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 20px;
+  color: #f8fafc;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.progress {
+  background: #334155;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.bar {
+  background: #00bfff;
+  height: 100%;
+  width: 0;
+  transition: width 2s ease;
+}
+</style>
+
+</head>
+<body>
+  <header>
+    <h2>Portfolio</h2>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Education.html">Education</a>
+      <a href="skills.html">skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="skills-section">
+    <h1><span>My</span> Skills</h1>
+    <div class="skills-container">
+        <div class="skills-box">
+           <h3>Coding Skills</h3>
+        <div class="skill">
+          <p>HTML <span>90%</span></p>
+          <div class="progress"><div class="bar" style="width: 90%"></div></div>
+        </div>
+        <div class="skill">
+          <p>CSS <span>80%</span></p>
+          <div class="progress"><div class="bar" style="width: 80%"></div></div>
+        </div>
+        <div class="skill">
+          <p>JavaScript <span>65%</span></p>
+          <div class="progress"><div class="bar" style="width: 65%"></div></div>
+        </div>
+        <div class="skill">
+          <p>Python <span>75%</span></p>
+          <div class="progress"><div class="bar" style="width: 75%"></div></div>
+        </div>
+      </div>
+        <div class="skills-box">
+        <div class="skill">
+             <h3>Professional Skills</h3>
+          <p>Web Design <span>95%</span></p>
+          <div class="progress"><div class="bar" style="width: 95%"></div></div>
+        </div>
+        <div class="skill">
+          <p>Web Development <span>67%</span></p>
+          <div class="progress"><div class="bar" style="width: 67%"></div></div>
+        </div>
+        <div class="skill">
+          <p>Graphic Design <span>85%</span></p>
+          <div class="progress"><div class="bar" style="width: 85%"></div></div>
+        </div>
+        <div class="skill">
+          <p>SEO Marketing <span>60%</span></p>
+          <div class="progress"><div class="bar" style="width: 60%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+<script>
+    window.addEventListener('load', () => {
+  const bars = document.querySelectorAll('.bar');
+  bars.forEach(bar => {
+    const width = bar.style.width;
+    bar.style.width = '0';
+    setTimeout(() => {
+      bar.style.width = width;
+    }, 100); // slight delay for animation
+  });
+});
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const target = e.target.closest('a');
+      if (!target || target.getAttribute('target') === '_blank' || target.href.includes('#')) return;
+
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location = target.href;
+      }, 500); // match animation duration
+    });
+  });
+</script>

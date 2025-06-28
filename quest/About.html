@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | Ifat Bhangwar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e1830;
+      color: #f3f3f3;
+    }
+body {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+    header {
+      background: #0b1120;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: rgb(241, 244, 245);
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 40px;
+      gap: 40px;
+    }
+
+    .about-text {
+      flex: 2;
+      text-align: left;
+      color: white;
+    }
+
+    .about-text h1,
+    .about-text h2,
+    .about-text h3 {
+      color: rgb(102, 231, 245);
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .profile-pic-container {
+      flex: 0 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .gradient-border {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      padding: 10px;
+      background: radial-gradient(circle, #ff6ec4 0%, #7873f5 40%, #1fd1f9 70%, transparent 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow:
+        0 0 25px rgba(255, 110, 196, 0.5),
+        0 0 35px rgba(120, 115, 245, 0.4),
+        0 0 45px rgba(31, 209, 249, 0.4);
+    }
+
+    .gradient-border img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+    }
+
+    button {
+      background-color: #00bfff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0284c7;
+    }
+
+    @media (max-width: 800px) {
+      .main-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-text {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfolio</h1>
+    <h1>About Me</h1>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Education.html">Education</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <div class="profile-pic-container">
+      <div class="gradient-border">
+        <img src="ifat pic.jpg" alt="Profile Picture" />
+      </div>
+    </div>
+
+    <div class="about-text">
+      
+      <h2>Hello, I'm Ifat Bhangwar</h2>
+      <p>
+        I am an Information Technology student with a passion for web development, graphic design, and cybersecurity.
+        I enjoy building creative solutions, learning new technologies, and exploring ethical hacking to strengthen online security.
+      </p>
+      <h3>My Goals</h3>
+      <p>
+        My goal is to become a professional ethical hacker and a skilled web developer, while also growing as a graphic designer.
+        Ultimately, I want to start my own tech-based business and contribute to making the digital world safer and more creative.
+      </p>
+      <h3>Education</h3>
+      <p>
+        Currently pursuing a Bachelor’s degree in Information Technology at Quaid-e-Awam University of Engineering Science & Technology.
+      </p>
+      <button onclick="alert('Thanks for visiting!')">More About Me</button>
+    </div>
+  </main>
+</body>
+</html>
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const target = e.target.closest('a');
+      if (!target || target.getAttribute('target') === '_blank' || target.href.includes('#')) return;
+
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location = target.href;
+      }, 500); // match animation duration
+    });
+  });
+</script>
+
+
+
